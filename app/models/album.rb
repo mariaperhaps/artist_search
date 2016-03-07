@@ -3,7 +3,7 @@ class Album < ActiveRecord::Base
   belongs_to :artist
 
   def self.search(term, index, results)
-    albums = Album.where('lower(name) = ?', term.join(" ").downcase)
+    albums = Album.includes([:songs, :artist]).where('lower(name) = ?', term.join(" ").downcase)
     if albums != [] && index > 0
       results = []
     end

@@ -16,7 +16,7 @@ class Artist < ActiveRecord::Base
     possible_combos = get_combos(q)
     results = []
     possible_combos.each_with_index do |term, index|
-      artist = Artist.find_by('lower(name) = ?', term.join(" ").downcase)
+      artist = Artist.includes([:songs, :albums]).find_by('lower(name) = ?', term.join(" ").downcase)
         if artist != nil
            artist.albums.each do |album|
             artist_result = {
