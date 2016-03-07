@@ -1,0 +1,25 @@
+
+<div class="overlay"></div>
+<div class="search-bar">
+  <input  id="search-input" type="text">
+  <button id="search"><i class="fa fa-search fa-lg"></i></button>
+</div>
+
+<div id="album-container"></div>
+
+
+ <script type="text/template" id="album-template">
+    <img class="album-pic" src="{{ data.album.image_url }}">
+</script>
+
+<script type="text/template" id="info-template">
+  <h2 class="title">X</h2>
+    <div class="info">
+        <h2>{{ info.artist.name}}</h2>
+        <img class="artist-pic" src={{ info.artist.image_url}}>
+        <h3 class="black">{{ info.album.name }} \\ Released: {{ info.album.release_date }} </h3>
+          <& for( var i = 0; i < info.songs.length; i++ ){ &>
+            <a href={{ info.songs[i].preview_url}} target="_blank"><li>{{ info.songs[i].name }}</li></a>
+          <& }; &>
+    </div>
+</script>

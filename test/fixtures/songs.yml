@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  track_number: 
+  preview_url: MyString
+  references: 
+
+two:
+  name: MyString
+  track_number: 
+  preview_url: MyString
+  references: 

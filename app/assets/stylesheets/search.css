@@ -1,0 +1,111 @@
+body{
+  background: black;
+}
+
+.search-bar{
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+}
+
+input{
+  width: 80%;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid grey;
+  font-size: 40px;
+}
+
+#search{
+  height: 54px;
+  width: 60px;
+  border: none;
+  border-radius: 3px;
+  background: #c0392b;
+  color: white;
+  font-size: 1em;
+  vertical-align: top;
+}
+
+#album-container{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.album-box {
+  display: inline-block;
+  width: 20%;
+  /*height: 250px;*/
+  overflow: hidden;
+  padding:  5px;
+}
+
+.album-box img {
+  width: 100%;
+}
+
+.info li{
+  list-style: none;
+}
+
+.title{
+  float: right;
+  margin-right: 20px;
+}
+
+.overlay{
+  display: none;
+  position:fixed !important;
+  z-index: 100;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background: black;
+  opacity: .6;
+}
+
+.songs-info{
+  color: white;
+  font-family: Lato;
+  font-size: 15px;
+  display: none;
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 10%;
+  z-index: 1000;
+  background: #c0392b;
+  opacity: .8;
+  padding: 10px;
+  -webkit-box-shadow: -12px 9px 0px -1px rgba(0,0,0,1);
+  -moz-box-shadow: -12px 9px 0px -1px rgba(0,0,0,1);
+  box-shadow: -12px 9px 0px -1px rgba(0,0,0,1);
+}
+
+.songs-info a{
+  color: white;
+  text-decoration: none;
+}
+
+.songs-info a:hover{
+  color: #7f8c8d;
+}
+
+.black{
+  color: black;
+}
+
+.artist-pic{
+  width: 50px;
+}
+
+@media(max-width: 460px){
+  .search-bar{
+    width: 90%;
+  }
+}
+
+
